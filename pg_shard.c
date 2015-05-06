@@ -547,7 +547,7 @@ ErrorIfQueryNotSupported(Query *queryTree)
 		}
 	}
 
-	if (hasNonConstTargetEntryExprs || hasNonConstQualExprs)
+	if (hasNonConstTargetEntryExprs)
 	{
 		ereport(ERROR, (errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
 						errmsg("cannot plan sharded modification containing values "
